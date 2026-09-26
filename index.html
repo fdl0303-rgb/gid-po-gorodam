@@ -5,40 +5,41 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Гид по городам — куда сходить с детьми и взрослым</title>
 <meta name="description" content="Гид по городам: Воронеж и Липецк. Выберите город, направление (с детьми или взрослым) и категорию — рестораны или развлечения. Пять проверенных мест в каждом направлении: где находится, средний чек и что из себя представляет.">
-<meta name="theme-color" content="#ff2e88">
+<meta name="theme-color" content="#f7f7f5">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Гид по городам!">
+<meta property="og:title" content="Гид по городам">
 <meta property="og:description" content="Воронеж и Липецк: куда сходить с детьми и взрослым. Рестораны и развлечения с адресом и средним чеком.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%A7%AD%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='5' fill='%23101012'/%3E%3Cpath d='M12 4v16M4 12h16' stroke='%23fff' stroke-width='1.2'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&family=Unbounded:wght@600;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
 
-<div class="decor" aria-hidden="true">
-  <span class="decor__blob decor__blob--1"></span>
-  <span class="decor__blob decor__blob--2"></span>
-  <span class="decor__blob decor__blob--3"></span>
-</div>
+<div class="bg-grid" aria-hidden="true"></div>
 
 <header class="header" id="top">
   <div class="container header__inner">
-    <a class="logo" href="#top">
-      <span class="logo__mark">🧭</span>
-      <span class="logo__text">Гид по <em>городам</em></span>
+    <a class="logo" href="#top" aria-label="Гид по городам — наверх">
+      <span class="logo__mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
+          <circle cx="12" cy="12" r="9"/>
+          <path d="M15.6 8.4 13.1 13.1 8.4 15.6l2.5-4.7z" fill="currentColor" stroke="none"/>
+        </svg>
+      </span>
+      <span class="logo__text">Гид по городам</span>
     </a>
 
-    <nav class="nav" id="nav">
-      <a class="nav__link" href="#cities">Города</a>
-      <a class="nav__link" href="#places">Места</a>
-      <a class="nav__link" href="#about">О нас</a>
-      <a class="nav__link nav__link--accent" href="#contacts">Контакты</a>
+    <nav class="nav" id="nav" aria-label="Основная навигация">
+      <a class="nav__link" href="#cities"><i>01</i>Города</a>
+      <a class="nav__link" href="#places"><i>02</i>Места</a>
+      <a class="nav__link" href="#about"><i>03</i>О нас</a>
+      <a class="nav__link nav__link--cta" href="#contacts">Контакты</a>
     </nav>
 
-    <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false">
-      <span></span><span></span><span></span>
+    <button class="burger" id="burger" aria-label="Меню" aria-expanded="false">
+      <span></span><span></span>
     </button>
   </div>
 </header>
@@ -48,48 +49,51 @@
   <section class="hero">
     <div class="container hero__inner">
       <div class="hero__copy">
-        <span class="badge reveal">🔥 <b id="heroCityCount">2</b> города · <b id="heroPlaceCount">40</b> мест · <b>4</b> направления</span>
-        <h1 class="hero__title reveal">Гид по <span class="grad">городам</span>!</h1>
-        <p class="hero__text reveal">Спрашиваешь, куда сходить с ребёнком, куда пойти вдвоём и где поесть? Выбирай город — покажем лучшие места: с адресом, средним чеком и коротким описанием. Без рекламы и лишних слов.</p>
+        <p class="eyebrow reveal">Информационный гид <b>/</b> Воронеж <b>·</b> Липецк <b>·</b> далее до 50 городов</p>
+
+        <h1 class="hero__title reveal">Гид<br>по городам</h1>
+
+        <p class="hero__lead reveal">Спрашиваешь, куда сходить с ребёнком, куда пойти вдвоём и где поесть. Выберите город — покажем пять мест в каждом направлении: адрес, средний чек и короткое описание. Без рекламы.</p>
+
         <div class="hero__actions reveal">
-          <button class="btn btn--primary" data-scroll="#cities">Выбрать город <span class="btn__arrow">→</span></button>
-          <a class="btn btn--ghost" href="#about">О проекте</a>
+          <a class="btn btn--primary" data-scroll="#cities">Выбрать город <i>→</i></a>
+          <a class="btn btn--quiet" data-scroll="#about">О проекте</a>
         </div>
-        <div class="hero__chips reveal">
-          <span class="chip chip--pink">🧒 С детьми</span>
-          <span class="chip chip--violet">🍷 Взрослым</span>
-          <span class="chip chip--cyan">🍽️ Рестораны</span>
-          <span class="chip chip--green">🎡 Развлечения</span>
-        </div>
+
+        <dl class="metrics reveal">
+          <div class="metric"><dt>Городов сейчас</dt><dd><b data-count="0" data-metric="cities">0</b></dd></div>
+          <div class="metric"><dt>Мест в гиде</dt><dd><b data-count="0" data-metric="places">0</b></dd></div>
+          <div class="metric"><dt>Направлений</dt><dd><b>04</b></dd></div>
+        </dl>
       </div>
 
-      <div class="hero__visual reveal" aria-hidden="true">
-        <div class="visual__card visual__card--a"><span>🦁</span><b>Зоопарк</b></div>
-        <div class="visual__card visual__card--b"><span>🍽️</span><b>Ресторан</b></div>
-        <div class="visual__card visual__card--c"><span>🎡</span><b>Аттракционы</b></div>
-        <div class="visual__compass">🧭</div>
-      </div>
+      <aside class="hero__index reveal" aria-label="Города в гиде">
+        <p class="hero__indexHead">Индекс городов</p>
+        <div id="heroIndex"></div>
+      </aside>
     </div>
   </section>
 
-  <!-- ПРЕИМУЩЕСТВА -->
-  <section class="features">
-    <div class="container features__grid">
-      <article class="feature reveal">
-        <span class="feature__icon">📍</span>
-        <h3>Адрес и район</h3>
-        <p>Каждое место привязано к району или улице — открывайте карту и сразу стройте маршрут.</p>
-      </article>
-      <article class="feature reveal">
-        <span class="feature__icon">💸</span>
-        <h3>Средний чек</h3>
-        <p>Понимаете бюджет заранее: от бесплатных парков до ужина на двоих.</p>
-      </article>
-      <article class="feature reveal">
-        <span class="feature__icon">⚡</span>
-        <h3>Три клика</h3>
-        <p>Город → направление → категория. Никаких длинных списков и регистраций.</p>
-      </article>
+  <!-- ПРИНЦИПЫ -->
+  <section class="band">
+    <div class="container">
+      <ul class="principles">
+        <li class="principle">
+          <span class="principle__num">01</span>
+          <h3>Адрес и район</h3>
+          <p>Каждое место привязано к улице или району — маршрут строится сразу.</p>
+        </li>
+        <li class="principle">
+          <span class="principle__num">02</span>
+          <h3>Средний чек</h3>
+          <p>Бюджет известен заранее: от бесплатных парков до ужина на двоих.</p>
+        </li>
+        <li class="principle">
+          <span class="principle__num">03</span>
+          <h3>Три шага</h3>
+          <p>Город → направление → категория. Никаких длинных списков и регистраций.</p>
+        </li>
+      </ul>
     </div>
   </section>
 
@@ -97,34 +101,31 @@
   <section class="section" id="cities">
     <div class="container">
       <header class="section__head reveal">
-        <span class="section__kicker">Шаг 1</span>
-        <h2 class="section__title">Выберите <span class="grad grad--2">город</span></h2>
-        <p class="section__sub">Сейчас в гиде 2 города. Добавляем новые — до 50.</p>
+        <p class="eyebrow">Шаг 01 — Город</p>
+        <h2 class="section__title">Выберите город</h2>
+        <p class="section__sub">Сейчас в гиде два города. База рассчитана на 50: добавляем новые города без изменения вёрстки.</p>
       </header>
       <div class="cities" id="citiesGrid"></div>
     </div>
   </section>
 
-  <!-- МЕСТА (появляется после выбора города) -->
-  <section class="section explorer" id="places" aria-live="polite">
+  <!-- МЕСТА -->
+  <section class="section section--flush explorer" id="places" aria-live="polite">
     <div class="container">
-      <div class="explorer__top" id="explorerTop" hidden>
-        <span class="chip chip--city" id="chipCity">—</span>
-        <div class="explorer__reset">
-          <span class="steps-label">Выберите направление</span>
-          <button class="btn btn--ghost btn--sm" id="resetBtn">Сменить город</button>
-        </div>
+      <div class="crumbs" id="explorerTop" hidden>
+        <span class="crumb crumb--city" id="chipCity">—</span>
+        <button class="link-btn" id="resetBtn">Сменить город</button>
       </div>
 
       <header class="section__head reveal" id="explorerHead" hidden>
-        <span class="section__kicker" id="explorerKicker">Шаг 2</span>
+        <p class="eyebrow" id="explorerKicker">Шаг 02</p>
         <h2 class="section__title" id="explorerTitle">Куда сходим?</h2>
-        <p class="section__sub" id="explorerSub">Выберите, с кем и куда — покажем 5 мест.</p>
+        <p class="section__sub" id="explorerSub">Выберите направление.</p>
       </header>
 
-      <div class="levels">
-        <div class="level" id="levelDirs" hidden></div>
-        <div class="level level--cats" id="levelCats" hidden></div>
+      <div class="segs">
+        <div class="seg" id="levelDirs" hidden></div>
+        <div class="seg" id="levelCats" hidden></div>
       </div>
 
       <div class="places" id="placesGrid"></div>
@@ -135,29 +136,32 @@
   <section class="section about" id="about">
     <div class="container about__inner">
       <div class="about__copy reveal">
-        <span class="section__kicker">О проекте</span>
-        <h2 class="section__title">Гид, который <span class="grad grad--3">экономит время</span></h2>
-        <p>«Гид по городам» — маленький информационный проект о местах, куда действительно стоит сходить. Мы не собираем тысячи ссылок: в каждом направлении только пять мест, у каждого понятно, зачем вы туда идёте.</p>
-        <p>Формат простой: выбрали город, выбрали направление — с детьми или взрослым, дальше рестораны или развлечения. Дальше — пять карточек с адресом, средним чеком и коротким описанием.</p>
-        <p class="about__note">Текст заполнен как образец — замените его на свою историю и свои цифры.</p>
-        <div class="about__stats">
-          <div class="stat"><b data-count="50">0</b><span>городов в плане</span></div>
-          <div class="stat"><b data-count="200">0</b><span>мест в гиде</span></div>
-          <div class="stat"><b data-count="4">0</b><span>направления</span></div>
+        <p class="eyebrow">Шаг 03 — О проекте</p>
+        <h2 class="section__title">Гид, который экономит время</h2>
+        <div class="prose">
+          <p>«Гид по городам» — небольшой информационный проект о местах, куда действительно стоит сходить. Мы не собираем тысячи ссылок: в каждом направлении только пять мест, и у каждого понятно, зачем вы туда идёте.</p>
+          <p>Формат простой. Выбрали город, выбрали направление — с детьми или взрослым, дальше рестораны или развлечения. В результате — пять карточек с адресом, средним чеком и коротким описанием.</p>
+          <p>Текст и цифры заполнены как образец: замените их на свои данные, когда будете готовы.</p>
+        </div>
+
+        <div class="figures">
+          <div class="figure"><b>50</b><span>городов в плане</span></div>
+          <div class="figure"><b>04</b><span>направления</span></div>
+          <div class="figure"><b>05</b><span>мест в каждой связке</span></div>
         </div>
       </div>
 
-      <div class="about__card reveal">
-        <div class="about__card-top">✨</div>
-        <h3>Чем этот гид лучше карты?</h3>
-        <ul class="ticks">
+      <aside class="panel reveal">
+        <h3 class="panel__title">Чем этот гид лучше карты</h3>
+        <ol class="ticks">
           <li>Без рекламы и купленных мест</li>
           <li>Средний чек сразу в карточке</li>
           <li>Разделение: с детьми и взрослым</li>
           <li>Кнопка «Открыть на карте» в один клик</li>
-        </ul>
-        <a class="btn btn--primary btn--block" data-scroll="#cities">Пробовать <span class="btn__arrow">→</span></a>
-      </div>
+        </ol>
+        <a class="btn btn--primary btn--block" data-scroll="#cities">Открыть список городов <i>→</i></a>
+        <p class="panel__note">Демо-версия: цены и адреса указаны ориентировочно — проверяйте перед визитом.</p>
+      </aside>
     </div>
   </section>
 
@@ -165,41 +169,41 @@
   <section class="section contacts" id="contacts">
     <div class="container">
       <header class="section__head reveal">
-        <span class="section__kicker">Шаг 3</span>
-        <h2 class="section__title">Пишите <span class="grad grad--2">нам</span></h2>
-        <p class="section__sub">Нашли крутое место, увидели ошибку в чеке — просто напишите. Контакты заполнены как образец.</p>
+        <p class="eyebrow">Шаг 04 — Связь</p>
+        <h2 class="section__title">Контакты</h2>
+        <p class="section__sub">Нашли крутое место или увидели неточность в чеке — напишите. Данные заполнены как образец.</p>
       </header>
 
-      <div class="contacts__grid">
-        <a class="contact-card reveal" href="tel:+79000000000">
-          <span class="contact-card__icon">📞</span>
-          <b>+7 (900) 000-00-00</b>
-          <span>Телефон и WhatsApp</span>
+      <div class="c-table">
+        <a class="c-row" href="tel:+79000000000">
+          <span class="c-row__k">Телефон / WhatsApp</span>
+          <span class="c-row__v">+7 (900) 000-00-00</span>
+          <span class="c-row__i" aria-hidden="true">↗</span>
         </a>
-        <a class="contact-card reveal" href="https://t.me/gidpogorodam" target="_blank" rel="noopener">
-          <span class="contact-card__icon">✈️</span>
-          <b>@gidpogorodam</b>
-          <span>Telegram</span>
+        <a class="c-row" href="https://t.me/gidpogorodam" target="_blank" rel="noopener">
+          <span class="c-row__k">Telegram</span>
+          <span class="c-row__v">@gidpogorodam</span>
+          <span class="c-row__i" aria-hidden="true">↗</span>
         </a>
-        <a class="contact-card reveal" href="mailto:hello@gidpo-gorodam.ru">
-          <span class="contact-card__icon">✉️</span>
-          <b>hello@gidpo-gorodam.ru</b>
-          <span>Email</span>
+        <a class="c-row" href="mailto:hello@gidpo-gorodam.ru">
+          <span class="c-row__k">Email</span>
+          <span class="c-row__v">hello@gidpo-gorodam.ru</span>
+          <span class="c-row__i" aria-hidden="true">↗</span>
         </a>
-        <a class="contact-card reveal" href="https://vk.com/gidpogorodam" target="_blank" rel="noopener">
-          <span class="contact-card__icon">🔗</span>
-          <b>vk.com/gidpogorodam</b>
-          <span>ВКонтакте</span>
+        <a class="c-row" href="https://vk.com/gidpogorodam" target="_blank" rel="noopener">
+          <span class="c-row__k">ВКонтакте</span>
+          <span class="c-row__v">vk.com/gidpogorodam</span>
+          <span class="c-row__i" aria-hidden="true">↗</span>
         </a>
-        <div class="contact-card reveal">
-          <span class="contact-card__icon">📍</span>
-          <b>г. Воронеж, ул. Примерная, 1</b>
-          <span>Офис гида, 2 этаж</span>
+        <div class="c-row">
+          <span class="c-row__k">Адрес</span>
+          <span class="c-row__v">г. Воронеж, ул. Примерная, 1</span>
+          <span class="c-row__i" aria-hidden="true">—</span>
         </div>
-        <div class="contact-card reveal">
-          <span class="contact-card__icon">🕒</span>
-          <b>Ежедневно 10:00 — 20:00</b>
-          <span>Время ответа на сообщения</span>
+        <div class="c-row">
+          <span class="c-row__k">Часы работы</span>
+          <span class="c-row__v">Ежедневно 10:00 — 20:00</span>
+          <span class="c-row__i" aria-hidden="true">—</span>
         </div>
       </div>
     </div>
@@ -208,8 +212,8 @@
 
 <footer class="footer">
   <div class="container footer__inner">
-    <a class="logo logo--sm" href="#top"><span class="logo__mark">🧭</span><span class="logo__text">Гид по <em>городам</em></span></a>
-    <p class="footer__note">Демо-версия: цены и адреса указаны ориентировочно, проверяйте перед визитом. Кнопка «Открыть на карте» ведёт к поиску места.</p>
+    <span class="footer__brand">Гид по городам</span>
+    <p class="footer__note">Цены и адреса — ориентировочные демо-данные. Проверяйте перед визитом.</p>
     <a class="footer__up" href="#top">Наверх ↑</a>
   </div>
 </footer>
