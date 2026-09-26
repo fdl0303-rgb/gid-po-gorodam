@@ -17,6 +17,24 @@
 </head>
 <body>
 
+<svg class="svg-defs" width="0" height="0" aria-hidden="true" focusable="false">
+  <defs>
+    <filter id="grassRough" x="-8%" y="-60%" width="116%" height="220%" color-interpolation-filters="sRGB">
+      <feTurbulence type="fractalNoise" baseFrequency="0.016 0.072" numOctaves="4" seed="11" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="6" xChannelSelector="R" yChannelSelector="G" result="d"/>
+      <feMorphology in="d" operator="dilate" radius="0.6" result="g"/>
+      <feGaussianBlur in="g" stdDeviation="0.28"/>
+    </filter>
+
+    <filter id="grassFine" x="-8%" y="-60%" width="116%" height="220%" color-interpolation-filters="sRGB">
+      <feTurbulence type="fractalNoise" baseFrequency="0.035 0.14" numOctaves="3" seed="5" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="2.6" xChannelSelector="R" yChannelSelector="G" result="d"/>
+      <feMorphology in="d" operator="dilate" radius="0.45" result="g"/>
+      <feGaussianBlur in="g" stdDeviation="0.22"/>
+    </filter>
+  </defs>
+</svg>
+
 <div class="bg-grid" aria-hidden="true"></div>
 
 <header class="header" id="top">
@@ -51,7 +69,8 @@
       <div class="hero__copy">
         <p class="eyebrow reveal">Информационный гид <b>/</b> Воронеж <b>·</b> Липецк <b>·</b> далее до 50 городов</p>
 
-        <h1 class="hero__title reveal">Гид<br>по городам</h1>
+        <h1 class="hero__title grass reveal">Гид<br>по городам</h1>
+        <span class="hero__rule" aria-hidden="true"></span>
 
         <p class="hero__lead reveal">Спрашиваешь, куда сходить с ребёнком, куда пойти вдвоём и где поесть. Выберите город — покажем пять мест в каждом направлении: адрес, средний чек и короткое описание. Без рекламы.</p>
 
@@ -102,7 +121,7 @@
     <div class="container">
       <header class="section__head reveal">
         <p class="eyebrow">Шаг 01 — Город</p>
-        <h2 class="section__title">Выберите город</h2>
+        <h2 class="section__title grass">Выберите город</h2>
         <p class="section__sub">Сейчас в гиде два города. База рассчитана на 50: добавляем новые города без изменения вёрстки.</p>
       </header>
       <div class="cities" id="citiesGrid"></div>
@@ -119,7 +138,7 @@
 
       <header class="section__head reveal" id="explorerHead" hidden>
         <p class="eyebrow" id="explorerKicker">Шаг 02</p>
-        <h2 class="section__title" id="explorerTitle">Куда сходим?</h2>
+        <h2 class="section__title grass" id="explorerTitle">Куда сходим?</h2>
         <p class="section__sub" id="explorerSub">Выберите направление.</p>
       </header>
 
@@ -137,7 +156,7 @@
     <div class="container about__inner">
       <div class="about__copy reveal">
         <p class="eyebrow">Шаг 03 — О проекте</p>
-        <h2 class="section__title">Гид, который экономит время</h2>
+        <h2 class="section__title grass">Гид, который экономит время</h2>
         <div class="prose">
           <p>«Гид по городам» — небольшой информационный проект о местах, куда действительно стоит сходить. Мы не собираем тысячи ссылок: в каждом направлении только пять мест, и у каждого понятно, зачем вы туда идёте.</p>
           <p>Формат простой. Выбрали город, выбрали направление — с детьми или взрослым, дальше рестораны или развлечения. В результате — пять карточек с адресом, средним чеком и коротким описанием.</p>
@@ -170,7 +189,7 @@
     <div class="container">
       <header class="section__head reveal">
         <p class="eyebrow">Шаг 04 — Связь</p>
-        <h2 class="section__title">Контакты</h2>
+        <h2 class="section__title grass">Контакты</h2>
         <p class="section__sub">Нашли крутое место или увидели неточность в чеке — напишите. Данные заполнены как образец.</p>
       </header>
 

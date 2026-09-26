@@ -141,6 +141,33 @@ svg { display: block; }
 }
 .link-btn:hover { color: var(--ink); border-color: var(--ink); border-style: solid; background: var(--surface); }
 
+/* ---------- ТРАВЯНОЙ ЗАГОЛОВОК ---------- */
+.svg-defs { position: absolute; width: 0; height: 0; overflow: hidden; }
+
+.grass {
+  background-image:
+    repeating-linear-gradient(94deg, rgba(255,255,255,.10) 0 1.5px, rgba(10,50,20,.10) 1.5px 3px, transparent 3px 4.5px),
+    linear-gradient(96deg, #0c4a1f 0%, #17823a 22%, #34b64c 46%, #6fd85a 70%, #cdf065 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  text-shadow:
+    0 0 2px rgba(18,96,36,.50),
+    0 0 7px rgba(52,182,76,.38),
+    0 0 18px rgba(109,216,90,.26),
+    0 3px 0 rgba(9,52,22,.26);
+  filter: url(#grassRough);
+}
+.grass::selection { background: rgba(47,60,224,.18); }
+.hero__title.grass { background-size: 100% 100%, 100% 100%; }
+.section__title.grass { background-size: 100% 100%, 100% 100%; filter: url(#grassFine); }
+.city__name > .grass { display: inline-block; filter: url(#grassFine); }
+.hero__rule {
+  display: block; width: 128px; height: 3px; margin: -6px 0 0; border-radius: 3px;
+  background: linear-gradient(90deg, #0c4a1f, #34b64c 55%, #cdf065);
+}
+
 /* ---------- HERO ---------- */
 .hero { padding: 92px 0 72px; }
 .hero__inner { display: grid; grid-template-columns: 1.15fr .85fr; gap: 64px; align-items: start; }

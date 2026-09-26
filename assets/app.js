@@ -72,7 +72,7 @@
         aria-label="Смотреть места в городе ${c.name}" style="transition-delay:${i * 70}ms">
         <span class="city__index">${num(i)}</span>
         <div>
-          <h3 class="city__name">${c.name} <span class="city__emoji" aria-hidden="true">${c.emoji}</span></h3>
+          <h3 class="city__name"><span class="grass">${c.name}</span> <span class="city__emoji" aria-hidden="true">${c.emoji}</span></h3>
           <p class="city__sub">${c.tagline}</p>
         </div>
         <ul class="city__facts">
