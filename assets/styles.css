@@ -53,7 +53,18 @@ svg { display: block; }
   padding: 0 28px;
 }
 
-/* ---------- Техническая сетка фона ---------- */
+/* ---------- Фон: чертёж высоток + техническая сетка ---------- */
+.bg-blueprint {
+  position: fixed; inset: 0; z-index: -2; pointer-events: none;
+  background-image: url('blueprint.svg');
+  background-repeat: repeat-x;
+  background-position: center 34%;
+  background-size: 1240px auto;
+  opacity: .8;
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 26%, #000 78%, rgba(0, 0, 0, .35) 100%);
+  mask-image: linear-gradient(to bottom, transparent 0, #000 26%, #000 78%, rgba(0, 0, 0, .35) 100%);
+}
+
 .bg-grid {
   position: fixed; inset: 0; z-index: -1; pointer-events: none;
   background-image:

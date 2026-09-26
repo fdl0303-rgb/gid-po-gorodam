@@ -367,10 +367,21 @@
       el.burger.setAttribute('aria-expanded', 'false');
     }));
 
+    const blueprint = $('.bg-blueprint');
+    const calm = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    let queued = false;
+
     window.addEventListener('scroll', () => {
       const y = window.scrollY;
       el.header.classList.toggle('is-stuck', y > 8);
       el.toTop.classList.toggle('is-visible', y > 700);
+      if (blueprint && !calm && !queued) {
+        queued = true;
+        requestAnimationFrame(() => {
+          blueprint.style.transform = `translate3d(0, ${(y * 0.07).toFixed(1)}px, 0)`;
+          queued = false;
+        });
+      }
     }, { passive: true });
 
     el.toTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
